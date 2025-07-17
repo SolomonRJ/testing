@@ -10,21 +10,20 @@ html, body, #root {
   width: 100%;
 }
 
-/* Use dynamic viewport height for stable layout */
 .app-container {
   display: flex;
   flex-direction: column;
-  min-height: 100dvh; /* Dynamic Viewport Height */
+  justify-content: space-between; /* Push header to top and footer to bottom */
+  min-height: 100dvh; /* Viewport height */
 }
 
-/* Header and footer take fixed heights */
+/* Header and Footer Styles */
 .header {
   background-color: #0077ff;
   color: white;
   padding: 20px;
   text-align: center;
   font-size: 24px;
-  flex-shrink: 0;
 }
 
 .footer {
@@ -33,10 +32,4 @@ html, body, #root {
   padding: 20px;
   text-align: center;
   font-size: 20px;
-  flex-shrink: 0;
 }
-
-/* Optional: middle space filler (if you want) */
-/* .content {
-  flex: 1;
-} */
