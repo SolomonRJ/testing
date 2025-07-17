@@ -8,12 +8,9 @@ function App() {
       document.documentElement.style.setProperty('--vh', `${vh}px`);
     };
 
-    setViewportHeight(); // Set on load
-    window.addEventListener('resize', setViewportHeight); // Update on resize
-
-    return () => {
-      window.removeEventListener('resize', setViewportHeight);
-    };
+    setViewportHeight();
+    window.addEventListener('resize', setViewportHeight);
+    return () => window.removeEventListener('resize', setViewportHeight);
   }, []);
 
   return (
