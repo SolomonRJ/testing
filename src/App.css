@@ -10,11 +10,12 @@ html, body, #root {
   width: 100%;
 }
 
+/* Use real viewport height via --vh (updated by JS) */
 .app-container {
   display: flex;
   flex-direction: column;
-  justify-content: space-between; /* Push header to top and footer to bottom */
-  min-height: 100dvh; /* Viewport height */
+  justify-content: space-between;
+  height: calc(var(--vh, 1vh) * 100); /* Use JS-calculated height */
 }
 
 /* Header and Footer Styles */
